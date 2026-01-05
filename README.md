@@ -1,12 +1,27 @@
 # FamilySafe OS: The X-PP Standard
-> **Lead Author: David Emanuel Oprea**
+> **One Household. One Policy. Every Screen.**
 
-X-PP (Cross-Platform Policy Protocol) is an open-standard proposal to unify digital governance across Windows, Linux, Android, and iOS. This repository contains the formal specification and the manifesto for the **FamilySafe OS** certification.
+[![Status: RFC Draft](https://img.shields.io/badge/Status-RFC_Draft_v2.3-blue.svg)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-## 🚀 Vision
-To move from fragmented "walled gardens" to a native, kernel-level enforcement standard that respects household sovereignty.
+X-PP (Cross-Platform Policy Protocol) is an open-standard proposal to unify digital governance across Windows, Linux, macOS, Android, iOS, and proprietary systems like Tizen, webOS, and Gaming Consoles.
 
-## 🛠 Repository Map
-- **/RFC**: Technical specifications of the X-PP Protocol.
-- **/Manifesto**: The 11 core principles of FamilySafe OS.
-- **/Web**: Source code for [familysafeos.org](https://familysafeos.org).
+## 🚀 The Vision
+To transform digital safety from a fragmented "walled garden" into a native, kernel-level OS utility. We enable **Total Environment Governance**, where a single policy follows the user across PCs, mobile devices, handhelds (Steam Deck/PlayStation Portal), and Smart TVs.
+
+## 🛠 Key Features
+- **3-Tier Hybrid Architecture:** Controller, Satellite (Proxy), and Node.
+- **Remote Mode Signaling (RMS):** Instant, atomic switching to "ChildSafe" modes via API.
+- **Kernel-Level Watchdog:** Tamper-proof enforcement using LSM (Linux) and WFP (Windows).
+- **Universal Quota:** Time limits that follow the identity, not the hardware.
+
+## 📂 Repository Map
+- **/RFC**: [The X-PP v2.3 Technical Specification](RFC/x-pp-v2.md)
+- **/Manifesto**: [The 12 Principles of FamilySafe OS](Manifesto/MANIFESTO.md)
+- **/Web**: Source for [familysafeos.org](https://familysafeos.org)
+
+## 🤝 Join the Movement
+We are currently in the **Call for Participation** phase. We need Kernel engineers, IoT developers, and Security architects.
+
+**Lead Author:** David Emanuel Oprea  
+**Co-Author:** Gemini
