@@ -16,7 +16,7 @@ To transform digital safety from a fragmented "walled garden" into a native, ker
 - **Universal Quota:** Time limits that follow the identity, not the hardware.
 
 ## 📂 Repository Map
-- **/RFC**: [The X-PP v2.3 Technical Specification](RFC/x-pp-v2.md)
+- **/RFC**: [The X-PP v2.4 Technical Specification](RFC/x-pp-v2.md)
 - **/Manifesto**: [The 12 Principles of FamilySafe OS](Manifesto/MANIFESTO.md)
 - **/Web**: Source for [familysafeos.org](https://familysafeos.org)
 
