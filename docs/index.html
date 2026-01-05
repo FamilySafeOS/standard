@@ -6,6 +6,10 @@
     <title>FamilySafe OS | Unified Digital Governance</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Ensuring smooth scrolling for the internal links */
+        html { scroll-behavior: smooth; }
+    </style>
 </head>
 <body>
     <header>
@@ -21,7 +25,7 @@
         </nav>
         <div class="hero">
             <h1>One Household. <br>One Policy. <span>Every Screen.</span></h1>
-            <p>The open-source protocol for native, kernel-level safety across Windows, Linux, Smart TVs, and Consoles.</p>
+            <p>X-PP v2.4.0: The open-source protocol for native, kernel-level safety across Windows, Linux, Smart TVs, and Consoles.</p>
             <div class="cta-group">
                 <a href="https://github.com/FamilySafeOS/standard" class="btn primary">Contribute on GitHub</a>
                 <a href="#rfc" class="btn secondary">View RFC Specs</a>
@@ -29,27 +33,87 @@
         </div>
     </header>
 
+    <section id="vision">
+        <div class="section-header">
+            <h2>The Total Environment Standard</h2>
+            <p>Moving beyond app-based limits to native OS state orchestration.</p>
+        </div>
+        <div class="principles-grid">
+            <div class="card">
+                <h3>Atomic ChildSafe Mode</h3>
+                <p>Instantly toggle restricted modes across the entire household. One signal reconfigures everything from PC kernels to TV inputs.</p>
+            </div>
+            <div class="card">
+                <h3>Kernel Enforcement</h3>
+                <p>X-PP resides in the OS fabric (LSM/WFP), ensuring safety is tamper-proof and respects household sovereignty.</p>
+            </div>
+            <div class="card">
+                <h3>Privacy First</h3>
+                <p>No central cloud tracking. All synchronization is End-to-End Encrypted and identity-bound.</p>
+            </div>
+            <div class="card">
+                <h3>Universal Quota</h3>
+                <p>Time limits follow the identity, not the device. 1 hour on the console means 1 hour less on the laptop.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="rfc" class="dark-section">
+        <div class="section-header">
+            <h2>X-PP v2.4 Signaling</h2>
+            <p>Universal JSON-LD schema for cross-platform compliance and real-time state synchronization.</p>
+        </div>
+        <div class="code-container">
+            <pre>
+{
+  "@context": "https://familysafeos.org/v2",
+  "@type": "StateChangeSignal",
+  "state": "CHILD_SAFE_MODE",
+  "enforcement": "KERNEL_MANDATORY",
+  "parameters": {
+    "uiFiltering": "NATIVE_KIDS_UI",
+    "networkProfile": "STRICT_DNS_ONLY"
+  }
+}
+            </pre>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+             <a href="https://github.com/FamilySafeOS/standard/blob/main/RFC/x-pp-v2.md" style="color: #007AFF; text-decoration: none; font-weight: 600;">View Full RFC v2.4.0 Specification →</a>
+        </div>
+    </section>
+
     <section id="certification">
         <div class="section-header">
             <h2>Certification Program</h2>
-            <p>Industry-standard tiers for cross-platform compliance.</p>
+            <p>Adherence to the X-PP standard allows manufacturers to display the FamilySafe OS badge.</p>
         </div>
         <div class="principles-grid">
             <div class="card cert-card">
-                <img src="cl1.png" alt="FS-CL1" class="cert-badge">
+                <img src="cl1.png" alt="FS-CL1 Network Gateway" class="cert-badge">
                 <h3>Network Gateway</h3>
-                <p>Compliance for legacy devices and closed IoT ecosystems via the X-PP Bridge.</p>
+                <p>Compliance for legacy devices and closed IoT ecosystems via the X-PP Network Bridge/Proxy.</p>
             </div>
             <div class="card cert-card">
-                <img src="cl2.png" alt="FS-CL2" class="cert-badge">
+                <img src="cl2.png" alt="FS-CL2 System Integrated" class="cert-badge">
                 <h3>System Integrated</h3>
-                <p>Native system-service support and Remote Mode Signaling (RMS).</p>
+                <p>Native system-service support and Remote Mode Signaling (RMS) without full kernel modification.</p>
             </div>
             <div class="card cert-card">
-                <img src="cl3.png" alt="FS-CL3" class="cert-badge">
+                <img src="cl3.png" alt="FS-CL3 Native Kernel" class="cert-badge">
                 <h3>Native Kernel</h3>
-                <p>Full integration into OS Kernel with hardware-backed security.</p>
+                <p>The gold standard. Full integration into OS Kernel with hardware-backed security and an immutable watchdog.</p>
             </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="https://github.com/FamilySafeOS/standard/blob/main/Vendors/AUDIT_CHECKLIST.md" class="btn secondary">View Audit Checklist</a>
+        </div>
+    </section>
+
+    <section id="cta-footer" class="dark-section">
+        <div class="section-header" style="text-align: center;">
+            <h2>Join the Call for Participation</h2>
+            <p>We are seeking Kernel Engineers, OS Architects, and Security Researchers.</p>
+            <a href="https://github.com/FamilySafeOS/standard/issues" class="btn primary">Get Involved on GitHub</a>
         </div>
     </section>
 
