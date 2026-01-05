@@ -1,0 +1,7 @@
+<svg width="150" height="150" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="75" cy="75" r="70" fill="#32D74B" fill-opacity="0.1" stroke="#32D74B" stroke-width="4"/>
+  <text x="75" y="40" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" fill="#32D74B">CERTIFIED</text>
+  <path d="M75 50 L85 55 V75 C85 85 75 90 75 90 C75 90 65 85 65 75 V55 L75 50Z" fill="#32D74B"/>
+  <text x="75" y="120" font-family="Arial" font-size="36" font-weight="900" text-anchor="middle" fill="#32D74B">1</text>
+  <text x="75" y="140" font-family="Arial" font-size="8" font-weight="bold" text-anchor="middle" fill="#32D74B">NETWORK GATEWAY</text>
+</svg>
