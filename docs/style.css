@@ -1,123 +1,140 @@
-:root { --primary: #007AFF; --bg: #050505; --text: #ffffff; --card: #121212; }
-body { margin: 0; font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-nav { display: flex; justify-content: space-between; padding: 2rem 10%; align-items: center; }
-.logo { font-weight: 800; font-size: 1.5rem; }
-.logo span { color: var(--primary); }
-nav ul { display: flex; list-style: none; gap: 2rem; }
-nav a { color: white; text-decoration: none; opacity: 0.7; transition: 0.3s; }
-nav a:hover { opacity: 1; color: var(--primary); }
-.hero { text-align: center; padding: 100px 10%; background: radial-gradient(circle at center, #007aff10 0%, transparent 70%); }
-h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 20px; }
-h1 span { color: var(--primary); }
-.hero p { font-size: 1.2rem; opacity: 0.7; max-width: 800px; margin: 0 auto 40px; }
-.btn { padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: 0.3s; display: inline-block; }
-.primary { background: var(--primary); color: white; }
-.secondary { border: 1px solid #333; color: white; margin-left: 15px; }
-section { padding: 80px 10%; }
-.principles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-.card { background: var(--card); padding: 40px; border-radius: 20px; border: 1px solid #222; }
-.card h3 { color: var(--primary); margin-top: 0; }
-.dark-bg { background: #000; text-align: center; }
-footer { padding: 60px; text-align: center; opacity: 0.4; font-size: 0.9rem; }
-.badge-label {
-    display: inline-block;
-    background: #333;
-    color: #fff;
-    padding: 4px 12px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-    letter-spacing: 1px;
+/* style.css - Updated Light Theme */
+:root { 
+    --primary: #007AFF; 
+    --bg: #ffffff; 
+    --text: #1d1d1f; 
+    --card: #f5f5f7; 
+    --border: #d2d2d7;
+    --code-bg: #1c1c1e;
 }
 
-.section-header h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+body { 
+    margin: 0; 
+    font-family: 'Inter', sans-serif; 
+    background: var(--bg); 
+    color: var(--text); 
+    line-height: 1.6; 
+    -webkit-font-smoothing: antialiased;
 }
 
-.section-header p {
-    opacity: 0.6;
-    margin-bottom: 40px;
+nav { 
+    display: flex; 
+    justify-content: space-between; 
+    padding: 1.5rem 10%; 
+    align-items: center; 
+    border-bottom: 1px solid var(--border);
 }
 
-.dark-section {
-    background: #000;
-    border-top: 1px solid #111;
-    border-bottom: 1px solid #111;
-}
-
-.code-container {
-    background: #080808;
-    padding: 2rem;
-    border-radius: 12px;
-    border: 1px solid #222;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-pre {
-    margin: 0;
-    color: #00ff41; /* Terminal green for the code */
-    font-size: 0.9rem;
-    overflow-x: auto;
-}
-.cert-card {
-    text-align: center;
-    padding: 2rem;
+.logo { 
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
-.cert-badge {
-    width: 120px;
-    height: 120px;
-    margin-bottom: 1.5rem;
+nav ul { display: flex; list-style: none; gap: 2rem; }
+nav a { color: var(--text); text-decoration: none; font-weight: 500; opacity: 0.8; transition: 0.3s; }
+nav a:hover { opacity: 1; color: var(--primary); }
+
+.hero { 
+    text-align: center; 
+    padding: 120px 10%; 
+    background: radial-gradient(circle at center, #007aff08 0%, transparent 70%); 
 }
 
-.logo img {
-    display: block;
+h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 20px; color: #1d1d1f; letter-spacing: -0.02em; }
+h1 span { color: var(--primary); }
+.hero p { font-size: 1.4rem; color: #86868b; max-width: 800px; margin: 0 auto 40px; }
+
+.btn { padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: 0.3s; display: inline-block; }
+.primary { background: var(--primary); color: white; }
+.secondary { border: 1px solid var(--border); color: var(--text); margin-left: 15px; }
+.secondary:hover { background: #f5f5f7; }
+
+section { padding: 100px 10%; }
+.section-header h2 { font-size: 3rem; margin-bottom: 15px; font-weight: 800; }
+.section-header p { font-size: 1.2rem; color: #86868b; margin-bottom: 50px; }
+
+.principles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.card { 
+    background: var(--card); 
+    padding: 40px; 
+    border-radius: 24px; 
+    border: 1px solid transparent; 
+    transition: 0.3s ease;
 }
 
-.dark-section {
-    background: #050505;
-    padding: 80px 10%;
-    color: #fff;
-}
-/* Animation for a smooth "lift" effect */
-.cert-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.card h3 { color: var(--primary); font-size: 1.5rem; margin-top: 0; }
+.card p { color: #48484a; }
+
+/* Certification Hover Glows */
+.cert-card { 
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
 }
 
-.cert-card:hover {
-    transform: translateY(-10px);
+.cert-badge { 
+    width: 140px; 
+    height: 140px; 
+    margin-bottom: 1.5rem; 
+    transition: transform 0.3s ease; 
+}
+
+.cert-card:hover { 
+    transform: translateY(-10px); 
+    background: #ffffff; 
 }
 
 /* Specific Glow Effects based on Level */
 /* Level 1 - Green */
-.cert-card:nth-child(1):hover {
-    box-shadow: 0 10px 30px -10px rgba(50, 215, 75, 0.3);
-    border-color: #32D74B;
+.cert-card:nth-child(1):hover { 
+    box-shadow: 0 20px 40px rgba(50, 215, 75, 0.15); 
+    border-color: #32D74B; 
 }
 
 /* Level 2 - Blue */
-.cert-card:nth-child(2):hover {
-    box-shadow: 0 10px 30px -10px rgba(0, 122, 255, 0.3);
-    border-color: #007AFF;
+.cert-card:nth-child(2):hover { 
+    box-shadow: 0 20px 40px rgba(0, 122, 255, 0.15); 
+    border-color: #007AFF; 
 }
 
 /* Level 3 - Purple */
-.cert-card:nth-child(3):hover {
-    box-shadow: 0 10px 30px -10px rgba(94, 92, 230, 0.3);
-    border-color: #5E5CE6;
+.cert-card:nth-child(3):hover { 
+    box-shadow: 0 20px 40px rgba(94, 92, 230, 0.15); 
+    border-color: #5E5CE6; 
 }
 
-/* Ensure images scale nicely */
-.cert-badge {
-    transition: transform 0.3s ease;
+.cert-card:hover .cert-badge { transform: scale(1.05); }
+
+/* Technical Section stays dark for contrast */
+.dark-section { 
+    background: #fbfbfd; 
+    border-top: 1px solid var(--border); 
+    border-bottom: 1px solid var(--border); 
+    padding: 80px 10%;
 }
 
-.cert-card:hover .cert-badge {
-    transform: scale(1.05);
+.code-container { 
+    background: var(--code-bg); 
+    padding: 2.5rem; 
+    border-radius: 16px; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+pre { 
+    margin: 0; 
+    color: #00ff41; 
+    font-family: 'Courier New', monospace; 
+    font-size: 0.95rem; 
+    overflow-x: auto; 
+}
+
+footer { 
+    padding: 80px 10%; 
+    text-align: center; 
+    border-top: 1px solid var(--border); 
+    color: #86868b; 
+    font-size: 0.9rem; 
 }
