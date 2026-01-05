@@ -85,3 +85,39 @@ pre {
     padding: 80px 10%;
     color: #fff;
 }
+/* Animation for a smooth "lift" effect */
+.cert-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Specific Glow Effects based on Level */
+/* Level 1 - Green */
+.cert-card:nth-child(1):hover {
+    box-shadow: 0 10px 30px -10px rgba(50, 215, 75, 0.3);
+    border-color: #32D74B;
+}
+
+/* Level 2 - Blue */
+.cert-card:nth-child(2):hover {
+    box-shadow: 0 10px 30px -10px rgba(0, 122, 255, 0.3);
+    border-color: #007AFF;
+}
+
+/* Level 3 - Purple */
+.cert-card:nth-child(3):hover {
+    box-shadow: 0 10px 30px -10px rgba(94, 92, 230, 0.3);
+    border-color: #5E5CE6;
+}
+
+/* Ensure images scale nicely */
+.cert-badge {
+    transition: transform 0.3s ease;
+}
+
+.cert-card:hover .cert-badge {
+    transform: scale(1.05);
+}
