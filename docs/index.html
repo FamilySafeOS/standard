@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FamilySafe OS | The Universal Standard for Digital Governance</title>
+    <title>FamilySafe OS | Unified Digital Governance</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">FamilySafe<span>OS</span></div>
+            <div class="logo">
+                <img src="logo.svg" alt="FamilySafe OS Logo" height="50">
+            </div>
             <ul>
                 <li><a href="https://github.com/FamilySafeOS/standard/blob/main/Manifesto/MANIFESTO.md">Manifesto</a></li>
                 <li><a href="#rfc">X-PP Standard</a></li>
@@ -19,10 +21,10 @@
         </nav>
         <div class="hero">
             <h1>One Household. <br>One Policy. <span>Every Screen.</span></h1>
-            <p>Introducing X-PP v2.4: The open-source protocol for native, kernel-level safety across Windows, Linux, Smart TVs, and Consoles.</p>
+            <p>X-PP v2.4.0: The open-source protocol for native, kernel-level safety across Windows, Linux, Smart TVs, and Consoles.</p>
             <div class="cta-group">
                 <a href="https://github.com/FamilySafeOS/standard" class="btn primary">Contribute on GitHub</a>
-                <a href="https://github.com/FamilySafeOS/standard/blob/main/RFC/x-pp-v2.md" class="btn secondary">Read the RFC</a>
+                <a href="https://github.com/FamilySafeOS/standard/blob/main/RFC/x-pp-v2.md" class="btn secondary">Read RFC Specs</a>
             </div>
         </div>
     </header>
@@ -55,7 +57,7 @@
     <section id="rfc" class="dark-section">
         <div class="section-header">
             <h2>X-PP v2.4 Signaling</h2>
-            <p>The Cross-Platform Policy Protocol uses JSON-LD for semantic consistency across Tizen, Windows, and Linux.</p>
+            <p>Universal JSON-LD schema for cross-platform compliance and real-time state synchronization.</p>
         </div>
         <div class="code-container">
             <pre>
@@ -76,24 +78,24 @@
         </div>
     </section>
 
-<section id="certification">
+    <section id="certification">
         <div class="section-header">
             <h2>Certification Program</h2>
             <p>Adherence to the X-PP standard allows manufacturers to display the FamilySafe OS badge.</p>
         </div>
         <div class="principles-grid">
-            <div class="card">
-                <div class="badge-label">FS-CL1</div>
+            <div class="card cert-card">
+                <img src="cl1.svg" alt="FS-CL1" class="cert-badge">
                 <h3>Network Gateway</h3>
                 <p>Compliance for legacy devices and closed IoT ecosystems via the X-PP Network Bridge/Proxy.</p>
             </div>
-            <div class="card">
-                <div class="badge-label" style="background: #555;">FS-CL2</div>
+            <div class="card cert-card">
+                <img src="cl2.svg" alt="FS-CL2" class="cert-badge">
                 <h3>System Integrated</h3>
-                <p>Native system-service support and Remote Mode Signaling (RMS) without full kernel-space modification.</p>
+                <p>Native system-service support and Remote Mode Signaling (RMS) without full kernel modification.</p>
             </div>
-            <div class="card">
-                <div class="badge-label" style="background: #007AFF;">FS-CL3</div>
+            <div class="card cert-card">
+                <img src="cl3.svg" alt="FS-CL3" class="cert-badge">
                 <h3>Native Kernel</h3>
                 <p>The gold standard. Full integration into OS Kernel with hardware-backed security and an immutable watchdog.</p>
             </div>
@@ -103,15 +105,14 @@
         </div>
     </section>
 
-    <section id="cta-footer" class="dark-section" style="text-align: center; padding: 100px 10%;">
+    <section id="cta-footer" class="dark-section">
         <h2>Join the Call for Participation</h2>
-        <p>We are seeking Kernel Engineers, OS Architects, and Security Researchers to build the future of household safety.</p>
+        <p>We are seeking Kernel Engineers, OS Architects, and Security Researchers.</p>
         <a href="https://github.com/FamilySafeOS/standard/issues" class="btn primary">Get Involved on GitHub</a>
     </section>
 
     <footer>
-        <p>&copy; 2026 FamilySafe OS Initiative. Lead Author: David Emanuel Oprea.</p>
+        <p>&copy; 2026 FamilySafe OS Initiative. Lead Author: David Emanuel Oprea. Co-authored by Gemini.</p>
     </footer>
 </body>
 </html>
-
