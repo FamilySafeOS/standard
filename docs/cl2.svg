@@ -1,0 +1,7 @@
+<svg width="150" height="150" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="75" cy="75" r="70" fill="#007AFF" fill-opacity="0.1" stroke="#007AFF" stroke-width="4"/>
+  <text x="75" y="40" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" fill="#007AFF">CERTIFIED</text>
+  <path d="M75 50 L85 55 V75 C85 85 75 90 75 90 C75 90 65 85 65 75 V55 L75 50Z" fill="#007AFF"/>
+  <text x="75" y="120" font-family="Arial" font-size="36" font-weight="900" text-anchor="middle" fill="#007AFF">2</text>
+  <text x="75" y="140" font-family="Arial" font-size="8" font-weight="bold" text-anchor="middle" fill="#007AFF">SYSTEM INTEGRATED</text>
+</svg>
