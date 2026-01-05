@@ -62,3 +62,26 @@ pre {
     font-size: 0.9rem;
     overflow-x: auto;
 }
+.cert-card {
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cert-badge {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1.5rem;
+}
+
+.logo img {
+    display: block;
+}
+
+.dark-section {
+    background: #050505;
+    padding: 80px 10%;
+    color: #fff;
+}
