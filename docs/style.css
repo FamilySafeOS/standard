@@ -19,3 +19,46 @@ section { padding: 80px 10%; }
 .card h3 { color: var(--primary); margin-top: 0; }
 .dark-bg { background: #000; text-align: center; }
 footer { padding: 60px; text-align: center; opacity: 0.4; font-size: 0.9rem; }
+.badge-label {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    opacity: 0.6;
+    margin-bottom: 40px;
+}
+
+.dark-section {
+    background: #000;
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+}
+
+.code-container {
+    background: #080808;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #222;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+pre {
+    margin: 0;
+    color: #00ff41; /* Terminal green for the code */
+    font-size: 0.9rem;
+    overflow-x: auto;
+}
