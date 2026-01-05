@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FamilySafe OS | Universal Standards</title>
+    <title>FamilySafe OS | Unified Digital Governance</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
@@ -12,54 +12,61 @@
         <nav>
             <div class="logo">FamilySafe<span>OS</span></div>
             <ul>
-                <li><a href="#manifesto">Manifesto</a></li>
+                <li><a href="https://github.com/FamilySafeOS/standard/blob/main/Manifesto/MANIFESTO.md">Manifesto</a></li>
                 <li><a href="#rfc">X-PP Standard</a></li>
                 <li><a href="https://github.com/FamilySafeOS/standard" target="_blank">GitHub</a></li>
             </ul>
         </nav>
         <div class="hero">
-            <h1>Unified Safety Signaling.<br><span>Atomic ChildSafe Mode.</span></h1>
-            <p>X-PP introduces native Remote Mode Signaling (RMS) for instant, kernel-level safety transitions across all household screens.</p>
+            <h1>One Household. <br>One Policy. <span>Every Screen.</span></h1>
+            <p>Introducing X-PP v2.4: The open-source protocol for native, kernel-level safety across Windows, Linux, Smart TVs, and Consoles.</p>
             <div class="cta-group">
                 <a href="https://github.com/FamilySafeOS/standard" class="btn primary">Contribute on GitHub</a>
-                <a href="#rfc" class="btn secondary">Read CSM Specs</a>
+                <a href="https://github.com/FamilySafeOS/standard/blob/main/RFC/x-pp-v2.md" class="btn secondary">Read the CSM Specs</a>
             </div>
         </div>
     </header>
 
-    <section id="csm">
-        <h2>Native ChildSafe Mode</h2>
+    <section id="vision">
+        <div class="section-header">
+            <h2>The Total Environment Standard</h2>
+            <p>Moving beyond app-based limits to native OS state orchestration.</p>
+        </div>
         <div class="principles-grid">
             <div class="card">
-                <h3>Atomic Transitions</h3>
-                <p>One signal reconfigures everything—from TV inputs to PC kernels—in milliseconds.</p>
+                <h3>Atomic ChildSafe Mode</h3>
+                <p>Instantly toggle restricted modes across the entire household. One signal reconfigures everything from PC kernels to TV inputs.</p>
             </div>
             <div class="card">
-                <h3>Hardware Verification</h3>
-                <p>Signals are verified by the Secure Enclave, ensuring that only the Household Owner can toggle modes.</p>
+                <h3>Kernel Enforcement</h3>
+                <p>X-PP resides in the OS fabric (LSM/WFP), ensuring safety is tamper-proof.</p>
             </div>
             <div class="card">
-                <h3>UI Sync</h3>
-                <p>Native OS interfaces react to the X-PP state, automatically switching to child-friendly dashboards.</p>
+                <h3>Universal Quota</h3>
+                <p>Time limits follow the identity, not the device. One quota for all screens.</p>
             </div>
         </div>
     </section>
 
-    <section id="code" class="dark-bg">
-        <h3>Signal Architecture</h3>
-        <div class="code-box">
+    <section id="rfc" class="dark-section">
+        <div class="section-header">
+            <h2>X-PP v2.4 Signaling</h2>
+            <p>Universal JSON-LD schema for cross-platform compliance.</p>
+        </div>
+        <div class="code-container">
             <pre>
 {
+  "@context": "https://familysafeos.org/v2",
+  "@type": "StateChangeSignal",
   "state": "CHILD_SAFE_MODE",
-  "enforcement": "KERNEL_MANDATORY",
-  "ui": "KIDS_SHELL_ACTIVE"
+  "enforcement": "KERNEL_MANDATORY"
 }
             </pre>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+             <a href="https://github.com/FamilySafeOS/standard/blob/main/RFC/x-pp-v2.md" style="color: #007AFF;">View Full RFC v2.4.0 Specification →</a>
         </div>
     </section>
 
     <footer>
-        <p>Maintained by <strong>David Emanuel Oprea</strong>. The future of native digital governance.</p>
-    </footer>
-</body>
-</html>
+        <p>&copy; 2026 FamilySafe OS Initiative. Lead Author: David Emanuel Oprea.</p>
