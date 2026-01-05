@@ -7,8 +7,43 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
     <style>
-        /* Ensuring smooth scrolling for the internal links */
+        /* Ensuring smooth scrolling for internal links */
         html { scroll-behavior: smooth; }
+        
+        /* Manifesto specific styling to ensure readability in white theme */
+        .manifesto-list {
+            list-style: none;
+            padding: 0;
+            counter-reset: manifesto-counter;
+        }
+        .manifesto-item {
+            counter-increment: manifesto-counter;
+            margin-bottom: 1.5rem;
+            padding-left: 3rem;
+            position: relative;
+        }
+        .manifesto-item::before {
+            content: counter(manifesto-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2rem;
+            height: 2rem;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.9rem;
+        }
+        .manifesto-item strong {
+            display: block;
+            color: var(--text);
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+        }
     </style>
 </head>
 <body>
@@ -19,6 +54,7 @@
             </div>
             <ul>
                 <li><a href="#vision">Vision</a></li>
+                <li><a href="#manifesto">Manifesto</a></li>
                 <li><a href="#rfc">Standard</a></li>
                 <li><a href="https://github.com/FamilySafeOS/standard" target="_blank">GitHub</a></li>
             </ul>
@@ -58,7 +94,54 @@
         </div>
     </section>
 
-    <section id="rfc" class="dark-section">
+    <section id="manifesto" class="dark-section">
+        <div class="section-header">
+            <h2>The FamilySafe OS Manifesto (v1.2)</h2>
+            <p>Authored by David Emanuel Oprea — The twelve principles for a safer digital household.</p>
+        </div>
+        <div class="card" style="max-width: 900px; margin: 0 auto; background: white; border: 1px solid var(--border);">
+            <div class="manifesto-list">
+                <div class="manifesto-item">
+                    <strong>Vendor Neutrality</strong> Policies must be portable across all FamilySafe-certified platforms.
+                </div>
+                <div class="manifesto-item">
+                    <strong>Decisional Hierarchy</strong> The household administrator is the ultimate authority.
+                </div>
+                <div class="manifesto-item">
+                    <strong>API Transparency</strong> OS vendors must provide official, native policy hooks.
+                </div>
+                <div class="manifesto-item">
+                    <strong>Privacy by Design</strong> Local processing and E2EE for all synchronization.
+                </div>
+                <div class="manifesto-item">
+                    <strong>Simplicity as Security</strong> Setup via the QR Trust-Pairing model.
+                </div>
+                <div class="manifesto-item">
+                    <strong>Offline Sovereignty</strong> Full governance must function in LAN-only environments.
+                </div>
+                <div class="manifesto-item">
+                    <strong>Delegated Enrollment</strong> Mobile satellites act as secure proxies for setup.
+                </div>
+                <div class="manifesto-item">
+                    <strong>Physical Safety Primacy (Break-Glass)</strong> Audited emergency access always supersedes digital rules.
+                </div>
+                <div class="manifesto-item">
+                    <strong>Kernel-Level Authority</strong> Enforcement must be a native, tamper-proof OS subsystem.
+                </div>
+                <div class="manifesto-item">
+                    <strong>Native Integration</strong> Evolution from middleware hacks to native kernel citizens.
+                </div>
+                <div class="manifesto-item">
+                    <strong>Ecosystem Independence</strong> Freedom to mix hardware brands without losing governance.
+                </div>
+                <div class="manifesto-item">
+                    <strong>Environmental Totality</strong> Policies follow the user, extending to TVs, Consoles, and Handhelds.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rfc">
         <div class="section-header">
             <h2>X-PP v2.4 Signaling</h2>
             <p>Universal JSON-LD schema for cross-platform compliance and real-time state synchronization.</p>
@@ -82,7 +165,7 @@
         </div>
     </section>
 
-    <section id="certification">
+    <section id="certification" class="dark-section">
         <div class="section-header">
             <h2>Certification Program</h2>
             <p>Adherence to the X-PP standard allows manufacturers to display the FamilySafe OS badge.</p>
@@ -106,14 +189,6 @@
         </div>
         <div style="text-align: center; margin-top: 3rem;">
             <a href="https://github.com/FamilySafeOS/standard/blob/main/Vendors/AUDIT_CHECKLIST.md" class="btn secondary">View Audit Checklist</a>
-        </div>
-    </section>
-
-    <section id="cta-footer" class="dark-section">
-        <div class="section-header" style="text-align: center;">
-            <h2>Join the Call for Participation</h2>
-            <p>We are seeking Kernel Engineers, OS Architects, and Security Researchers.</p>
-            <a href="https://github.com/FamilySafeOS/standard/issues" class="btn primary">Get Involved on GitHub</a>
         </div>
     </section>
 
