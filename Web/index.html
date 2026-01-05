@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FamilySafe OS | Unified Household Standard</title>
+    <title>FamilySafe OS | Universal Standards</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
@@ -13,45 +13,53 @@
             <div class="logo">FamilySafe<span>OS</span></div>
             <ul>
                 <li><a href="#manifesto">Manifesto</a></li>
-                <li><a href="#rfc">Technical Specs</a></li>
+                <li><a href="#rfc">X-PP Standard</a></li>
                 <li><a href="https://github.com/FamilySafeOS/standard" target="_blank">GitHub</a></li>
             </ul>
         </nav>
         <div class="hero">
-            <h1>Total Household Control.<br><span>Every Screen.</span></h1>
-            <p>X-PP is the first universal protocol for digital safety across Windows, Linux, Mobile, Smart TVs, and Consoles.</p>
+            <h1>Unified Safety Signaling.<br><span>Atomic ChildSafe Mode.</span></h1>
+            <p>X-PP introduces native Remote Mode Signaling (RMS) for instant, kernel-level safety transitions across all household screens.</p>
             <div class="cta-group">
-                <a href="https://github.com/FamilySafeOS/standard" class="btn primary">Join the CFP</a>
-                <a href="#rfc" class="btn secondary">View RFC v2.3</a>
+                <a href="https://github.com/FamilySafeOS/standard" class="btn primary">Contribute on GitHub</a>
+                <a href="#rfc" class="btn secondary">Read CSM Specs</a>
             </div>
         </div>
     </header>
 
-    <section id="features">
+    <section id="csm">
+        <h2>Native ChildSafe Mode</h2>
         <div class="principles-grid">
             <div class="card">
-                <h3>Remote Mode Toggle</h3>
-                <p>Switch your entire home to "ChildSafe Mode" with one tap. TVs, Consoles, and PCs respond instantly.</p>
+                <h3>Atomic Transitions</h3>
+                <p>One signal reconfigures everything—from TV inputs to PC kernels—in milliseconds.</p>
             </div>
             <div class="card">
-                <h3>Universal Quota</h3>
-                <p>Time limits follow the user. 1 hour on the PlayStation means 1 hour less on the PC or iPad.</p>
+                <h3>Hardware Verification</h3>
+                <p>Signals are verified by the Secure Enclave, ensuring that only the Household Owner can toggle modes.</p>
             </div>
             <div class="card">
-                <h3>Kernel Security</h3>
-                <p>Native integration into OS Kernels ensures protection that cannot be bypassed or uninstalled.</p>
+                <h3>UI Sync</h3>
+                <p>Native OS interfaces react to the X-PP state, automatically switching to child-friendly dashboards.</p>
             </div>
         </div>
     </section>
 
-    <section id="cfp" class="dark-bg">
-        <h2>Call for Participation</h2>
-        <p>We are seeking Kernel Engineers and IoT Architects to build the future of digital sovereignty.</p>
-        <a href="https://github.com/FamilySafeOS/standard/issues/1" class="btn primary">View Open Tasks</a>
+    <section id="code" class="dark-bg">
+        <h3>Signal Architecture</h3>
+        <div class="code-box">
+            <pre>
+{
+  "state": "CHILD_SAFE_MODE",
+  "enforcement": "KERNEL_MANDATORY",
+  "ui": "KIDS_SHELL_ACTIVE"
+}
+            </pre>
+        </div>
     </section>
 
     <footer>
-        <p>Developed by <strong>David Emanuel Oprea</strong>. Open Standard for a safer digital world.</p>
+        <p>Maintained by <strong>David Emanuel Oprea</strong>. The future of native digital governance.</p>
     </footer>
 </body>
 </html>
