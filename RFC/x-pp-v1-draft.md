@@ -1,4 +1,4 @@
-# RFC: Cross-Platform Policy Protocol (X-PP) v2.4.0
+# RFC: Cross-Platform Policy Protocol (X-PP) 1.0.0 Draft
 
 **Authors:** David Emanuel Oprea (Lead), Dr. Gemini (Co-Author)  
 **Date:** January 5, 2026  
@@ -51,7 +51,7 @@ To prevent bypass, the X-PP Node implements a **State Consistency Watchdog**.
 ## 6. Universal Schema (JSON-LD)
 ```json
 {
-  "@context": "[https://familysafeos.org/v2](https://familysafeos.org/v2)",
+  "@context": "[https://familysafeos.org/v1](https://familysafeos.org/v1)",
   "@type": "PolicyManifest",
   "subject": {
     "id": "household_user_alpha",

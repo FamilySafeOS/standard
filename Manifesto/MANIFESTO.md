@@ -1,5 +1,5 @@
-# The FamilySafe OS Manifesto (v1.2)
-**Lead Author:** David Emanuel Oprea
+# The FamilySafe OS Manifesto (v1.0)
+**Author:** David Emanuel Oprea
 
 ## The Twelve Principles
 
