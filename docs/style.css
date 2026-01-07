@@ -1,4 +1,4 @@
-/* style.css - Updated Light Theme */
+/* style.css - Full Responsive Light Theme */
 :root { 
     --primary: #007AFF; 
     --bg: #ffffff; 
@@ -7,9 +7,8 @@
     --border: #d2d2d7;
     --code-bg: #1c1c1e;
 }
-html {
-    scroll-behavior: smooth;
-}
+
+html { scroll-behavior: smooth; }
 
 body { 
     margin: 0; 
@@ -20,26 +19,33 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* --- Navigation & Header --- */
 nav { 
     display: flex; 
     justify-content: space-between; 
-    padding: 1.5rem 10%; 
+    padding: 1rem 10%; 
     align-items: center; 
     border-bottom: 1px solid var(--border);
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.logo { 
-    display: flex;
-    align-items: center;
-}
+.logo { display: flex; align-items: center; }
+.logo img { height: 45px; width: auto; }
 
-nav ul { display: flex; list-style: none; gap: 2rem; }
+nav ul { display: flex; list-style: none; gap: 2rem; margin: 0; padding: 0; }
 nav a { color: var(--text); text-decoration: none; font-weight: 500; opacity: 0.8; transition: 0.3s; }
 nav a:hover { opacity: 1; color: var(--primary); }
 
+/* Mobile Menu Toggle (Hidden on Desktop) */
+.menu-toggle { display: none; font-size: 1.5rem; cursor: pointer; background: none; border: none; color: var(--text); }
+
+/* --- Hero Section --- */
 .hero { 
     text-align: center; 
-    padding: 120px 10%; 
+    padding: 100px 10%; 
     background: radial-gradient(circle at center, #007aff08 0%, transparent 70%); 
 }
 
@@ -47,16 +53,27 @@ h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 20px; color: #1d1d1f; let
 h1 span { color: var(--primary); }
 .hero p { font-size: 1.4rem; color: #86868b; max-width: 800px; margin: 0 auto 40px; }
 
+.cta-group { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+
 .btn { padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: 0.3s; display: inline-block; }
 .primary { background: var(--primary); color: white; }
-.secondary { border: 1px solid var(--border); color: var(--text); margin-left: 15px; }
+.secondary { border: 1px solid var(--border); color: var(--text); }
 .secondary:hover { background: #f5f5f7; }
 
-section { padding: 100px 10%; }
+/* --- Global Sections --- */
+section { padding: 80px 10%; }
+.section-header { text-align: center; margin-bottom: 50px; }
 .section-header h2 { font-size: 3rem; margin-bottom: 15px; font-weight: 800; }
-.section-header p { font-size: 1.2rem; color: #86868b; margin-bottom: 50px; }
+.section-header p { font-size: 1.2rem; color: #86868b; max-width: 700px; margin: 0 auto; }
 
-.principles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.dark-section { 
+    background: #fbfbfd; 
+    border-top: 1px solid var(--border); 
+    border-bottom: 1px solid var(--border); 
+}
+
+/* --- Cards & Grid --- */
+.principles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
 .card { 
     background: var(--card); 
     padding: 40px; 
@@ -64,115 +81,73 @@ section { padding: 100px 10%; }
     border: 1px solid transparent; 
     transition: 0.3s ease;
 }
-
 .card h3 { color: var(--primary); font-size: 1.5rem; margin-top: 0; }
-.card p { color: #48484a; }
+.card p { color: #48484a; margin-bottom: 0; }
 
-/* Certification Hover Glows */
-.cert-card { 
-    text-align: center; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
+/* --- Manifesto Section --- */
+.manifesto-container { max-width: 900px; margin: 0 auto; background: white; border: 1px solid var(--border); }
+.manifesto-list { list-style: none; padding: 0; counter-reset: manifesto-counter; }
+.manifesto-item { counter-increment: manifesto-counter; margin-bottom: 1.5rem; padding-left: 3.5rem; position: relative; }
+.manifesto-item:last-child { margin-bottom: 0; }
+.manifesto-item::before {
+    content: counter(manifesto-counter);
+    position: absolute;
+    left: 0; top: 0;
+    width: 2.2rem; height: 2.2rem;
+    background: var(--primary); color: white;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 0.9rem;
 }
+.manifesto-item strong { display: block; color: var(--text); font-size: 1.1rem; margin-bottom: 0.2rem; }
 
-.cert-badge { 
-    width: 140px; 
-    height: 140px; 
-    margin-bottom: 1.5rem; 
-    transition: transform 0.3s ease; 
-}
-
-.cert-card:hover { 
-    transform: translateY(-10px); 
-    background: #ffffff; 
-}
-
-/* Specific Glow Effects based on Level */
-/* Level 1 - Green */
-.cert-card:nth-child(1):hover { 
-    box-shadow: 0 20px 40px rgba(50, 215, 75, 0.15); 
-    border-color: #32D74B; 
-}
-
-/* Level 2 - Blue */
-.cert-card:nth-child(2):hover { 
-    box-shadow: 0 20px 40px rgba(0, 122, 255, 0.15); 
-    border-color: #007AFF; 
-}
-
-/* Level 3 - Purple */
-.cert-card:nth-child(3):hover { 
-    box-shadow: 0 20px 40px rgba(94, 92, 230, 0.15); 
-    border-color: #5E5CE6; 
-}
-
-.cert-card:hover .cert-badge { transform: scale(1.05); }
-
-/* Technical Section stays dark for contrast */
-.dark-section { 
-    background: #fbfbfd; 
-    border-top: 1px solid var(--border); 
-    border-bottom: 1px solid var(--border); 
-    padding: 80px 10%;
-}
-
+/* --- Technical/Code Section --- */
 .code-container { 
     background: var(--code-bg); 
-    padding: 2.5rem; 
+    padding: 2rem; 
     border-radius: 16px; 
     max-width: 800px; 
     margin: 0 auto; 
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    overflow-x: auto;
 }
+pre { margin: 0; color: #00ff41; font-family: 'Courier New', monospace; font-size: 0.9rem; }
+.rfc-link-container { text-align: center; margin-top: 25px; }
+.rfc-link-container a { color: var(--primary); text-decoration: none; font-weight: 600; }
 
-pre { 
-    margin: 0; 
-    color: #00ff41; 
-    font-family: 'Courier New', monospace; 
-    font-size: 0.95rem; 
-    overflow-x: auto; 
-}
+/* --- Certification Section --- */
+.cert-card { text-align: center; display: flex; flex-direction: column; align-items: center; }
+.cert-badge { width: 140px; height: 140px; margin-bottom: 1.5rem; transition: transform 0.3s ease; }
+.cert-card:hover { transform: translateY(-10px); background: #ffffff; }
 
-footer { 
-    padding: 80px 10%; 
-    text-align: center; 
-    border-top: 1px solid var(--border); 
-    color: #86868b; 
-    font-size: 0.9rem; 
-}
+.cert-card:nth-child(1):hover { box-shadow: 0 20px 40px rgba(50, 215, 75, 0.15); border-color: #32D74B; }
+.cert-card:nth-child(2):hover { box-shadow: 0 20px 40px rgba(0, 122, 255, 0.15); border-color: #007AFF; }
+.cert-card:nth-child(3):hover { box-shadow: 0 20px 40px rgba(94, 92, 230, 0.15); border-color: #5E5CE6; }
+.cert-card:hover .cert-badge { transform: scale(1.05); }
 
-/* Manifesto specific styling to ensure readability in white theme */
-.manifesto-list {
-    list-style: none;
-    padding: 0;
-    counter-reset: manifesto-counter;
-}
-.manifesto-item {
-    counter-increment: manifesto-counter;
-    margin-bottom: 1.5rem;
-    padding-left: 3rem;
-    position: relative;
-}
-.manifesto-item::before {
-    content: counter(manifesto-counter);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 2rem;
-    height: 2rem;
-    background: var(--primary);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 800;
-    font-size: 0.9rem;
-}
-.manifesto-item strong {
-    display: block;
-    color: var(--text);
-    font-size: 1.1rem;
-    margin-bottom: 0.2rem;
+/* --- Footer --- */
+footer { padding: 60px 10%; text-align: center; border-top: 1px solid var(--border); color: #86868b; font-size: 0.9rem; }
+
+/* --- Responsive Media Queries --- */
+@media (max-width: 768px) {
+    nav { padding: 1rem 5%; }
+    .menu-toggle { display: block; }
+    nav ul {
+        display: none; /* Hide by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 100%; left: 0;
+        width: 100%;
+        background: white;
+        padding: 1.5rem 0;
+        border-bottom: 1px solid var(--border);
+        text-align: center;
+        gap: 1.5rem;
+    }
+    nav ul.active { display: flex; } /* Show when toggled */
+    
+    h1 { font-size: 2.8rem; }
+    .hero p { font-size: 1.1rem; }
+    section { padding: 60px 5%; }
+    .section-header h2 { font-size: 2.2rem; }
+    .card { padding: 30px; }
 }

@@ -11,9 +11,10 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="logo.png" alt="FamilySafe OS Logo" height="45">
+                <img src="logo.png" alt="FamilySafe OS Logo">
             </div>
-            <ul>
+            <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+            <ul id="nav-menu">
                 <li><a href="#vision">Vision</a></li>
                 <li><a href="#manifesto">Manifesto</a></li>
                 <li><a href="#rfc">Standard</a></li>
@@ -22,7 +23,7 @@
         </nav>
         <div class="hero">
             <h1>One Household. <br>One Policy. <span>Every Screen.</span></h1>
-            <p>he open-source protocol for native, kernel-level safety across Windows, Linux, Macs, Smart TVs, Mobile Phones, Gaming Consoles, and more.</p>
+            <p>The open-source protocol for native, kernel-level safety across Windows, Linux, Macs, Smart TVs, Mobile Phones, Gaming Consoles, and more.</p>
             <div class="cta-group">
                 <a href="https://github.com/FamilySafeOS/standard" class="btn primary">Contribute on GitHub</a>
                 <a href="#rfc" class="btn secondary">View RFC Specs</a>
@@ -60,7 +61,7 @@
             <h2>The FamilySafe OS Manifesto (v1.2)</h2>
             <p>The twelve principles for a safer digital household.</p>
         </div>
-        <div class="card" style="max-width: 900px; margin: 0 auto; background: white; border: 1px solid var(--border);">
+        <div class="card manifesto-container">
             <div class="manifesto-list">
                 <div class="manifesto-item">
                     <strong>Vendor Neutrality</strong> Policies must be portable across all FamilySafe-certified platforms.
@@ -121,8 +122,8 @@
 }
             </pre>
         </div>
-        <div style="text-align: center; margin-top: 20px;">
-             <a href="https://github.com/FamilySafeOS/standard/blob/main/RFC/x-pp-v2.md" style="color: #007AFF; text-decoration: none; font-weight: 600;">View Full RFC v2.4.0 Specification →</a>
+        <div class="rfc-link-container">
+             <a href="https://github.com/FamilySafeOS/standard/blob/main/RFC/x-pp-v2.md">View Full RFC v2.4.0 Specification →</a>
         </div>
     </section>
 
@@ -148,7 +149,7 @@
                 <p>The gold standard. Full integration into OS Kernel with hardware-backed security and an immutable watchdog.</p>
             </div>
         </div>
-        <div style="text-align: center; margin-top: 3rem;">
+        <div class="section-header" style="margin-top: 3rem; margin-bottom: 0;">
             <a href="https://github.com/FamilySafeOS/standard/blob/main/Vendors/AUDIT_CHECKLIST.md" class="btn secondary">View Audit Checklist</a>
         </div>
     </section>
@@ -156,6 +157,21 @@
     <footer>
         <p>&copy; 2026 FamilySafe OS Initiative. Author: David Emanuel Oprea.</p>
     </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('#nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
-
