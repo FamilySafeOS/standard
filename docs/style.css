@@ -141,3 +141,38 @@ footer {
     color: #86868b; 
     font-size: 0.9rem; 
 }
+
+/* Manifesto specific styling to ensure readability in white theme */
+.manifesto-list {
+    list-style: none;
+    padding: 0;
+    counter-reset: manifesto-counter;
+}
+.manifesto-item {
+    counter-increment: manifesto-counter;
+    margin-bottom: 1.5rem;
+    padding-left: 3rem;
+    position: relative;
+}
+.manifesto-item::before {
+    content: counter(manifesto-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2rem;
+    height: 2rem;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.9rem;
+}
+.manifesto-item strong {
+    display: block;
+    color: var(--text);
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
